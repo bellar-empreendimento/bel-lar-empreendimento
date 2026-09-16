@@ -13,6 +13,10 @@ interface SlideContent {
   ctaLink: string
   artImage: string
   artAlt: string
+  fit: 'contain' | 'cover'
+  position: string
+  maxWidth: string
+  height: string
 }
 
 const slides: SlideContent[] = [
@@ -22,8 +26,12 @@ const slides: SlideContent[] = [
     description: 'Conduzimos cada obra com os mais altos padrões de honestidade e transparência. Confie na Bel Lar para construir.',
     ctaText: 'Ver todos os projetos',
     ctaLink: '#projetos',
-    artImage: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80',
-    artAlt: 'Fachada Residencial Bel Lar',
+    artImage: '/midia/hero/image-4.webp',
+    artAlt: 'Engenheiro Bel Lar segurando projetos',
+    fit: 'contain',
+    position: 'object-bottom',
+    maxWidth: 'max-w-[580px]',
+    height: 'h-[94%]',
   },
   {
     badge: 'Engenharia e execução',
@@ -31,8 +39,12 @@ const slides: SlideContent[] = [
     description: 'Do estudo de viabilidade ao habite-se, com um único responsável técnico acompanhando o canteiro do início ao fim.',
     ctaText: 'Conheça a empresa',
     ctaLink: '#sobre',
-    artImage: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80',
-    artAlt: 'Engenharia Bel Lar',
+    artImage: '/midia/hero/image-7.webp',
+    artAlt: 'Fachada Residencial Bel Lar',
+    fit: 'contain',
+    position: 'object-bottom-right',
+    maxWidth: 'max-w-[720px]',
+    height: 'h-[90%]',
   },
 ]
 
@@ -51,27 +63,28 @@ export function HeroSlider() {
 
   return (
     <section className="relative flex h-screen min-h-[640px] overflow-hidden select-none">
-      {/* 1. Fundo Dividido: Lado Esquerdo Azul (#0d5cab) */}
+      {/* 1. Fundo Dividido: Lado Esquerdo com a imagem oficial banner-3.webp */}
       <div className="relative w-[42%] min-w-[180px] bg-[#0d5cab] overflow-hidden">
         <Image
-          src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80"
-          alt="Fachada Arquitetura Corporativa"
+          src="/midia/hero/banner-3.webp"
+          alt="Edifício Arquitetura Bel Lar"
           fill
           priority
-          sizes="(max-width: 768px) 100vw, 50vw"
-          className="object-cover object-[center_30%]"
+          sizes="(max-width: 768px) 100vw, 45vw"
+          className="object-cover object-[center_35%]"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0d5cab]/40 to-[#0b1e3e]/90" />
+        {/* Gradiente suave de ambientação */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0d5cab]/20 via-transparent to-[#0b1e3e]/70 pointer-events-none" />
       </div>
 
-      {/* 2. Fundo Dividido: Lado Direito Laranja (#f2521c) */}
+      {/* 2. Fundo Dividido: Lado Direito Laranja (#f2521c) com os recortes oficiais */}
       <div className="relative flex-1 bg-[#f2521c] overflow-hidden">
         {slides.map((slide, index) => {
           const isActive = index === current
           return (
             <div
               key={slide.title}
-              className={`absolute right-0 bottom-0 w-full max-w-[700px] h-[92%] flex items-end justify-center transition-all duration-1000 ease-out ${
+              className={`absolute right-2 sm:right-6 lg:right-10 bottom-0 w-full ${slide.maxWidth} ${slide.height} flex items-end justify-center transition-all duration-1000 ease-out ${
                 isActive 
                   ? 'opacity-100 translate-x-0' 
                   : 'opacity-0 translate-x-12 pointer-events-none'
@@ -83,8 +96,8 @@ export function HeroSlider() {
                   alt={slide.artAlt}
                   fill
                   priority={index === 0}
-                  sizes="(max-width: 1024px) 100vw, 600px"
-                  className="object-cover object-top rounded-tl-lg shadow-[-20px_20px_50px_rgba(0,0,0,0.35)]"
+                  sizes="(max-width: 1024px) 100vw, 650px"
+                  className={`${slide.fit === 'contain' ? 'object-contain' : 'object-cover'} ${slide.position} drop-shadow-[-15px_15px_30px_rgba(0,0,0,0.3)]`}
                 />
               </div>
             </div>
@@ -92,7 +105,7 @@ export function HeroSlider() {
         })}
       </div>
 
-      {/* 3. Conteúdo Flutuante Sobreposto */}
+      {/* 3. Conteúdo Flutuante Sobreposto (Centralizado no Encontro das Cores) */}
       <div className="absolute inset-0 flex items-center px-8 md:px-14 pt-28 pb-16 pointer-events-none">
         <div className="relative w-full max-w-[680px] md:ml-[7vw] pointer-events-auto">
           {slides.map((slide, index) => {
@@ -117,7 +130,7 @@ export function HeroSlider() {
                 </h1>
 
                 {/* Descrição */}
-                <p className="text-white/90 text-base sm:text-lg leading-relaxed max-w-[500px] mb-9 font-['Barlow',sans-serif]">
+                <p className="text-white/95 text-base sm:text-lg leading-relaxed max-w-[500px] mb-8 font-['Barlow',sans-serif]">
                   {slide.description}
                 </p>
 
