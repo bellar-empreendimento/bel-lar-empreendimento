@@ -9,6 +9,7 @@ import {
   Search, 
   ChevronDown 
 } from 'lucide-react'
+import { Footer } from '@/components/public/Footer'
 
 interface PublicLayoutProps {
   children: ReactNode
@@ -139,6 +140,9 @@ export default function PublicLayout({ children }: PublicLayoutProps) {
         <main className="w-full">
           {children}
         </main>
+
+        {/* Rodapé Global */}
+        <Footer />
       </div>
     </div>
   )
