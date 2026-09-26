@@ -4,10 +4,10 @@ import { ArrowRight } from 'lucide-react'
 
 export function QualityBanner() {
   return (
-    <section className="relative pb-16 lg:pb-28">
-      <div className="bg-[#17181c] w-full lg:w-[72%] min-w-full lg:min-w-[680px] py-12 lg:py-20">
+    <section className="relative pb-16 lg:pb-28 overflow-hidden">
+      <div className="bg-[#17181c] w-full lg:w-[80%] xl:w-[72%] py-10 sm:py-12 lg:py-20">
         {/* Cabeçalho do Bloco */}
-        <div className="px-6 md:px-12 lg:pl-[7vw] lg:pr-14 flex items-center justify-between gap-6 flex-wrap">
+        <div className="px-5 sm:px-8 md:px-12 lg:pl-[7vw] lg:pr-14 flex items-center justify-between gap-4 sm:gap-6 flex-wrap">
           <h2 className="text-white text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight font-['Archivo',sans-serif]">
             Entregamos Trabalho de Qualidade
           </h2>
@@ -20,8 +20,8 @@ export function QualityBanner() {
         </div>
 
         {/* Imagem com Botão de Ação Laranja na Borda */}
-        <div className="relative mt-8 lg:mt-12 lg:pl-[7vw]">
-          <div className="overflow-hidden relative h-[320px] sm:h-[420px] lg:h-[540px]">
+        <div className="relative mt-6 sm:mt-8 lg:mt-12 lg:pl-[7vw] px-0">
+          <div className="overflow-hidden relative h-[280px] sm:h-[420px] lg:h-[540px]">
             <Image
               src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1400&q=80"
               alt="Obra de Alta Qualidade"
@@ -34,9 +34,9 @@ export function QualityBanner() {
           <Link
             href="#projetos"
             aria-label="Ver mais projetos"
-            className="absolute -right-4 lg:-right-24 top-0 bottom-0 w-16 sm:w-20 lg:w-28 bg-[#f2521c] hover:bg-[#d8420f] transition-colors flex items-center justify-center text-white cursor-pointer shadow-lg"
+            className="absolute right-0 lg:-right-24 top-0 bottom-0 w-14 sm:w-20 lg:w-28 bg-[#f2521c] hover:bg-[#d8420f] transition-colors flex items-center justify-center text-white cursor-pointer shadow-lg z-10"
           >
-            <ArrowRight className="w-8 h-8" />
+            <ArrowRight className="w-6 h-6 sm:w-8 sm:h-8" />
           </Link>
         </div>
       </div>

@@ -14,6 +14,11 @@ export interface PageViewResult {
  */
 export async function trackPageView(pageName: string): Promise<PageViewResult> {
   try {
+    // Se as credenciais do Supabase não estiverem definidas, sai silenciosamente
+    if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) {
+      return { success: false, pageName, error: 'Supabase não configurado' }
+    }
+
     const supabase = await createClient()
 
     const { error } = await supabase.rpc('increment_page_view', {
@@ -21,14 +26,13 @@ export async function trackPageView(pageName: string): Promise<PageViewResult> {
     })
 
     if (error) {
-      console.error(`[trackPageView] Erro ao registrar visualização de "${pageName}":`, error.message)
+      // Retorna o erro sem disparar console.error para não travar o overlay de dev do Next.js
       return { success: false, pageName, error: error.message }
     }
 
     return { success: true, pageName }
   } catch (err) {
     const errorMessage = err instanceof Error ? err.message : 'Erro interno desconhecido'
-    console.error(`[trackPageView] Falha na execução da action:`, errorMessage)
     return { success: false, pageName, error: errorMessage }
   }
 }

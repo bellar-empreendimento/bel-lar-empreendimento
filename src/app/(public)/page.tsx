@@ -5,15 +5,15 @@ import { ProjectsGrid } from '@/components/public/ProjectsGrid'
 import { ServicesSection } from '@/components/public/ServicesSection'
 import { QualityBanner } from '@/components/public/QualityBanner'
 import { CommitmentSection } from '@/components/public/CommitmentSection'
-import { TestimonialsSection } from '@/components/public/TestimonialsSection'
+import { Testimonials } from '@/components/public/Testimonials'
 import { OngoingWorksSection } from '@/components/public/OngoingWorksSection'
 import { BlogSection } from '@/components/public/BlogSection'
 
 export const dynamic = 'force-dynamic'
 
 export default async function HomePage() {
-  // Registro atômico de visualização no Supabase antes da renderização
-  await trackPageView('home')
+  // Registro não-bloqueante e seguro de visualização
+  trackPageView('home').catch(() => {})
 
   return (
     <>
@@ -35,8 +35,8 @@ export default async function HomePage() {
       {/* 6. Métricas com Barras de Desempenho e Fotos Sobrepostas */}
       <CommitmentSection />
 
-      {/* 7. Depoimentos, Modelo 3D BIM e Logos de Parceiros */}
-      <TestimonialsSection />
+      {/* 7. Depoimentos e Prédio 3D Flutuante */}
+      <Testimonials />
 
       {/* 8. Obras em Andamento e Tipologias Arquitetônicas */}
       <OngoingWorksSection />

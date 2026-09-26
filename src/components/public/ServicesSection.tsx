@@ -45,11 +45,11 @@ export function ServicesSection() {
   }
 
   return (
-    <section id="servicos" className="py-24 lg:py-32 px-6 md:px-12 xl:px-20 max-w-[1440px] mx-auto">
-      <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-12 lg:gap-24 items-start">
+    <section id="servicos" className="py-14 sm:py-24 lg:py-32 px-5 sm:px-8 md:px-12 xl:px-20 max-w-[1440px] mx-auto overflow-hidden">
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-8 lg:gap-24 items-start">
         {/* Coluna Esquerda */}
         <div>
-          <h2 className="text-2xl sm:text-3xl lg:text-[32px] font-normal leading-relaxed text-[#5a6274] max-w-[20ch]">
+          <h2 className="text-xl sm:text-3xl lg:text-[32px] font-normal leading-relaxed text-[#5a6274] max-w-xl">
             Oferecemos todos os tipos de serviços nas áreas de{' '}
             <strong className="text-[#0b1e3e] font-bold">arquitetura, construção</strong> e{' '}
             <strong className="text-[#0b1e3e] font-bold">design de interiores</strong>

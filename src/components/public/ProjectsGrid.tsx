@@ -4,7 +4,7 @@ import { ArrowRight } from 'lucide-react'
 
 export function ProjectsGrid() {
   return (
-    <section id="projetos" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 auto-rows-[340px] lg:auto-rows-[clamp(300px,23vw,424px)]">
+    <section id="projetos" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 auto-rows-[300px] sm:auto-rows-[340px] lg:auto-rows-[clamp(300px,23vw,424px)] overflow-hidden">
       {/* 1. Card Laranja */}
       <div className="bg-[#f2521c] p-7 sm:p-10 flex flex-col justify-between hover:bg-[#d8420f] transition-colors group">
         <div>
@@ -20,11 +20,11 @@ export function ProjectsGrid() {
         </div>
       </div>
 
-      {/* 2. Foto com Zoom (Guindaste) */}
+      {/* 2. Foto com Zoom (Residencial Bel Lar) */}
       <div className="overflow-hidden relative group">
         <Image
-          src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=800&q=80"
-          alt="Operação de Canteiro e Guindastes"
+          src="/midia/obras/Bellarcasa.webp"
+          alt="Projeto Residencial Bel Lar Empreendimentos"
           fill
           sizes="(max-width: 1024px) 50vw, 25vw"
           className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"

@@ -1,11 +1,12 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { MapPin, Mail, Phone, Send } from 'lucide-react'
 
 export function Footer() {
   return (
-    <footer id="contato" className="bg-[#0b1e3e] text-white/70">
+    <footer id="contato" className="bg-[#0b1e3e] text-white/70 overflow-hidden">
       {/* Barra de Contato Superior */}
       <div className="max-w-[1240px] mx-auto px-6 md:px-8 py-14 grid grid-cols-1 md:grid-cols-3 gap-8 border-b border-white/10">
         <div className="flex gap-4 items-start">
@@ -55,18 +56,16 @@ export function Footer() {
       <div className="max-w-[1240px] mx-auto px-6 md:px-8 py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
         {/* Coluna 1: Sobre */}
         <div>
-          <div className="flex items-center gap-3 mb-5">
-            <div className="w-7 h-7 border-2 border-[#f2521c] relative flex-shrink-0">
-              <div className="absolute left-1.5 top-1.5 w-2.5 h-2.5 bg-[#f2521c]" />
-            </div>
-            <div>
-              <span className="text-white text-xl font-extrabold leading-none block font-['Archivo',sans-serif]">
-                Bel Lar
-              </span>
-              <span className="text-white/50 text-[8px] font-semibold tracking-[0.24em] uppercase mt-1 block">
-                Empreendimento
-              </span>
-            </div>
+          <div className="mb-5">
+            <Link href="/" className="inline-block hover:opacity-90 transition-opacity">
+              <Image
+                src="/midia/sobre/logowebsite.webp"
+                alt="Bel Lar Empreendimento"
+                width={180}
+                height={54}
+                className="h-10 md:h-11 w-auto object-contain"
+              />
+            </Link>
           </div>
           <p className="text-sm leading-relaxed text-white/70 max-w-xs">
             Construtora com sede em Canaã dos Carajás, atuando em obras comerciais, residenciais e industriais em todo o Pará desde 1992.
