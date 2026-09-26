@@ -11,15 +11,6 @@ export default function WhatsAppButton() {
   const message = "Olá!";
   const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
-  // Automatically open the popup after 5 seconds if not opened
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsOpen(true);
-      setShowNotification(false);
-    }, 5000);
-    return () => clearTimeout(timer);
-  }, []);
-
   const toggleOpen = () => {
     setIsOpen(!isOpen);
     if (!isOpen) setShowNotification(false);
@@ -31,10 +22,10 @@ export default function WhatsAppButton() {
   };
 
   return (
-    <div className="fixed bottom-6 left-6 z-50 flex flex-col items-start font-sans">
+    <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end font-sans">
       {/* Popup Window */}
       <div 
-        className={`mb-4 transition-all duration-300 origin-bottom-left ${
+        className={`mb-4 transition-all duration-300 origin-bottom-right ${
           isOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'
         }`}
       >
@@ -42,9 +33,11 @@ export default function WhatsAppButton() {
           {/* Header */}
           <div className="bg-[#0b1e3e] p-4 flex items-center justify-between relative">
             <div className="flex items-center gap-3">
-              <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-[#f2521c] bg-white flex items-center justify-center p-1">
-                <Image src="/midia/sobre/favicon.webp" alt="Bel Lar Empreendimentos" width={40} height={40} className="object-contain" />
-                <div className="absolute bottom-0 right-0 w-3 h-3 bg-green-500 rounded-full border-2 border-[#0b1e3e]"></div>
+              <div className="relative">
+                <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-[#f2521c] bg-white flex items-center justify-center p-1">
+                  <Image src="/midia/sobre/favicon.webp" alt="Bel Lar Empreendimentos" width={40} height={40} className="object-contain" />
+                </div>
+                <div className="absolute bottom-0 right-0 w-3.5 h-3.5 bg-[#25D366] rounded-full border-2 border-[#0b1e3e]"></div>
               </div>
               <div>
                 <h4 className="text-white font-bold text-sm leading-tight">Bel Lar Empreendimentos</h4>

@@ -174,12 +174,12 @@ export function HeroSlider() {
       </div>
 
       {/* 4. Controles do Slider */}
-      <div className="absolute right-4 bottom-5 sm:right-8 sm:bottom-8 md:right-10 md:bottom-10 flex flex-row md:flex-col z-30 shadow-lg bg-black/20 backdrop-blur-xs rounded-sm overflow-hidden">
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-row z-30 shadow-lg bg-black/20 backdrop-blur-xs rounded-full overflow-hidden">
         <button
           type="button"
           onClick={prevSlide}
           aria-label="Slide Anterior"
-          className="w-11 h-11 sm:w-14 sm:h-14 border border-white/40 flex items-center justify-center text-white hover:bg-white hover:text-[#f2521c] transition-colors cursor-pointer"
+          className="w-12 h-12 sm:w-14 sm:h-14 border border-white/40 border-r-0 rounded-l-full flex items-center justify-center text-white hover:bg-white hover:text-[#f2521c] transition-colors cursor-pointer"
         >
           <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
         </button>
@@ -187,7 +187,7 @@ export function HeroSlider() {
           type="button"
           onClick={nextSlide}
           aria-label="Próximo Slide"
-          className="w-11 h-11 sm:w-14 sm:h-14 border border-white/40 border-l-0 md:border-l md:border-t-0 flex items-center justify-center text-white hover:bg-white hover:text-[#f2521c] transition-colors cursor-pointer"
+          className="w-12 h-12 sm:w-14 sm:h-14 border border-white/40 rounded-r-full flex items-center justify-center text-white hover:bg-white hover:text-[#f2521c] transition-colors cursor-pointer"
         >
           <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
         </button>
