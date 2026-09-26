@@ -11,6 +11,7 @@ export interface BlogPost {
     name: string
     role: string
     avatar: string
+    bio?: string
   }
   category: string
   readTime: string
@@ -40,9 +41,10 @@ export const BLOG_POSTS: BlogPost[] = [
     year: '2026',
     publishedAt: '25 de Setembro de 2026',
     author: {
-      name: 'Eng. Geraldo Santos',
-      role: 'Diretor Técnico de Engenharia',
+      name: 'Geraldo Magela',
+      role: 'CEO — Chief Executive Officer',
       avatar: '/midia/obras/Geraldo.webp',
+      bio: 'Dono da empresa e CEO — Chief Executive Officer.',
     },
     category: 'Engenharia & Gestão',
     readTime: '4 min de leitura',

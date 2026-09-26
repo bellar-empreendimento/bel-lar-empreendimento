@@ -206,7 +206,7 @@ export default async function BlogPostDetailPage({ params }: PageProps) {
                 {post.author.name}
               </h4>
               <p className="text-xs text-gray-500 mt-1">
-                {post.author.role} &bull; Bel Lar Empreendimentos. Especialista em gestão de obras, conformidade técnica e soluções inovadoras na construção civil.
+                {post.author.bio || `${post.author.role} • Bel Lar Empreendimentos.`}
               </p>
             </div>
           </div>

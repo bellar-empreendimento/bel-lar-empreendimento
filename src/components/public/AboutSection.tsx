@@ -85,7 +85,7 @@ export function AboutSection() {
               <div className="relative w-11 h-11 sm:w-[52px] sm:h-[52px] rounded-full overflow-hidden flex-shrink-0 ring-2 ring-gray-100">
                 <Image
                   src="/midia/obras/Geraldo.webp"
-                  alt="Diretor Geraldo"
+                  alt="Geraldo Magela — CEO"
                   fill
                   sizes="60px"
                   className="object-cover"
