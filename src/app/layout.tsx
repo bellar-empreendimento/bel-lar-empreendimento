@@ -22,8 +22,11 @@ export const metadata: Metadata = {
   },
   description: "Há mais de 20 anos transformando projetos em obras sólidas. Especialistas em construção e engenharia nos segmentos residencial, comercial e industrial.",
   icons: {
-    icon: '/midia/sobre/favicon.webp',
-    shortcut: '/midia/sobre/favicon.webp',
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/midia/sobre/favicon.webp', type: 'image/webp' },
+    ],
+    shortcut: '/favicon.ico',
     apple: '/midia/sobre/favicon.webp',
   },
   openGraph: {

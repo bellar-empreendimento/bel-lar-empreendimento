@@ -53,7 +53,7 @@ export function ProjectsGrid() {
             Tendências
           </span>
           <h3 className="text-white text-xl sm:text-2xl font-bold leading-snug font-['Archivo',sans-serif]">
-            Espaços Construídos Para Todo Propósito Desde 1992
+            Espaços Construídos Para Todo Propósito Desde 2006
           </h3>
         </div>
         <div className="w-12 h-12 border border-white/50 flex items-center justify-center text-white group-hover:translate-x-1 transition-transform">

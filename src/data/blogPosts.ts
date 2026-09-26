@@ -50,9 +50,9 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: '4 min de leitura',
     image: 'https://images.unsplash.com/photo-1517581177682-a085bb7ffb15?auto=format&fit=crop&w=1200&q=80',
     imageCaption: 'Canteiro de obras monitorado com padrões rigorosos de engenharia civil moderna.',
-    excerpt: 'Desde a fundação em 1992, a Bel Lar Empreendimentos tem como premissa que cada estrutura erguida é um legado duradouro para as próximas gerações.',
+    excerpt: 'Desde a fundação em 2006, a Bel Lar Empreendimentos tem como premissa que cada estrutura erguida é um legado duradouro para as próximas gerações.',
     content: {
-      intro: 'Construir não é apenas empilhar tijolos ou moldar concreto. Quando iniciamos nossas atividades em 1992, a construção civil no interior do Pará enfrentava desafios logísticos imensos, ausência de padronização técnica e carência de fornecedores homologados. Três décadas depois, o padrão Bel Lar evoluiu com base em um princípio inegociável: honestidade técnica absoluta e precisão milimétrica.',
+      intro: 'Construir não é apenas empilhar tijolos ou moldar concreto. Quando iniciamos nossas atividades em 2006, a construção civil no interior do Pará enfrentava desafios logísticos imensos, ausência de padronização técnica e carência de fornecedores homologados. Duas décadas depois, o padrão Bel Lar evoluiu com base em um princípio inegociável: honestidade técnica absoluta e precisão milimétrica.',
       sections: [
         {
           heading: 'A Filosofia do Responsável Técnico Único',
