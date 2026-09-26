@@ -877,5 +877,97 @@
   }
 </script>
 
+  <!-- WhatsApp Floating Button -->
+  <style>
+    .wa-container { position: fixed; bottom: 24px; left: 24px; z-index: 50; display: flex; flex-direction: column; align-items: flex-start; font-family: 'Barlow', sans-serif; }
+    .wa-popup { margin-bottom: 16px; transform-origin: bottom left; transition: all 0.3s ease; opacity: 0; transform: scale(0.95); pointer-events: none; width: 320px; background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1); border: 1px solid #f3f4f6; }
+    .wa-popup.open { opacity: 1; transform: scale(1); pointer-events: auto; }
+    .wa-header { background: #0b1e3e; padding: 16px; display: flex; align-items: center; justify-content: space-between; position: relative; }
+    .wa-header-left { display: flex; align-items: center; gap: 12px; }
+    .wa-avatar { position: relative; width: 48px; height: 48px; border-radius: 50%; overflow: hidden; border: 2px solid #f2521c; background: white; display: flex; align-items: center; justify-content: center; padding: 4px; }
+    .wa-avatar img { width: 100%; height: 100%; object-fit: contain; }
+    .wa-status { position: absolute; bottom: 0; right: 0; width: 12px; height: 12px; background: #22c55e; border-radius: 50%; border: 2px solid #0b1e3e; }
+    .wa-title { color: white; font-weight: 700; font-size: 14px; line-height: 1.2; margin: 0; }
+    .wa-subtitle { color: rgba(255,255,255,0.8); font-size: 12px; margin: 0; }
+    .wa-close { background: none; border: none; color: rgba(255,255,255,0.8); cursor: pointer; padding: 4px; transition: color 0.2s; font-size: 20px; line-height: 1; }
+    .wa-close:hover { color: white; }
+    .wa-body { background: #f0f2f5; padding: 16px 16px 24px; }
+    .wa-bubble { background: white; padding: 12px; border-radius: 8px; border-top-left-radius: 0; box-shadow: 0 1px 2px rgba(0,0,0,0.05); display: inline-block; max-width: 85%; position: relative; }
+    .wa-bubble::before { content: ""; position: absolute; left: -8px; top: 0; border-top: 10px solid white; border-left: 10px solid transparent; }
+    .wa-bubble-name { color: #0b1e3e; font-size: 12px; font-weight: 700; margin: 0 0 4px; }
+    .wa-bubble-text { color: #374151; font-size: 14px; margin: 0; }
+    .wa-bubble-time { font-size: 10px; color: #9ca3af; text-align: right; margin-top: 4px; }
+    .wa-footer { padding: 16px; background: white; text-align: center; }
+    .wa-link { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: #25D366; color: white; font-weight: 700; border-radius: 9999px; padding: 12px 24px; width: 100%; transition: background 0.2s; text-decoration: none; }
+    .wa-link:hover { background: #1ebd5a; color: white; }
+    .wa-btn { width: 56px; height: 56px; background: #25D366; border: none; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); cursor: pointer; transition: transform 0.2s, background 0.2s; position: relative; }
+    .wa-btn:hover { background: #1ebd5a; transform: scale(1.05); }
+    .wa-btn.open { transform: rotate(-15deg); }
+    .wa-dot { position: absolute; top: -4px; right: -4px; display: flex; width: 16px; height: 16px; }
+    .wa-dot-ping { position: absolute; width: 100%; height: 100%; border-radius: 50%; background: #f87171; opacity: 0.75; animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite; }
+    .wa-dot-inner { position: relative; width: 16px; height: 16px; border-radius: 50%; background: #ef4444; border: 2px solid white; }
+    @keyframes ping { 75%, 100% { transform: scale(2); opacity: 0; } }
+  </style>
+
+  <div class="wa-container">
+    <div id="wa-popup" class="wa-popup">
+      <div class="wa-header">
+        <div class="wa-header-left">
+          <div class="wa-avatar">
+            <img src="/midia/sobre/favicon.webp" alt="Bel Lar Empreendimentos">
+            <div class="wa-status"></div>
+          </div>
+          <div>
+            <p class="wa-title">Bel Lar Empreendimentos</p>
+            <p class="wa-subtitle">Atendimento</p>
+          </div>
+        </div>
+        <button class="wa-close" onclick="toggleWaPopup(event)">&times;</button>
+      </div>
+      <div class="wa-body">
+        <div class="wa-bubble">
+          <p class="wa-bubble-name">Bel Lar Empreendimentos</p>
+          <p class="wa-bubble-text">Olá, como posso ajudar?</p>
+          <div class="wa-bubble-time">Agora</div>
+        </div>
+      </div>
+      <div class="wa-footer">
+        <a href="https://wa.me/5594991441811?text=Ol%C3%A1%21" target="_blank" class="wa-link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 1.84 6.36L.23 24l5.83-1.53A11.9 11.9 0 0 0 11.944 24c6.627 0 12-5.373 12-12s-5.373-12-12-12zm.056 21.98c-1.89 0-3.74-.51-5.36-1.47l-.38-.23-3.98 1.05 1.06-3.88-.25-.4A9.97 9.97 0 0 1 2 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10zm5.46-7.46c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.34.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.88-.8-1.47-1.79-1.64-2.09-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.38-.02-.53-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.09 4.5.71.31 1.27.5 1.7.64.71.22 1.36.19 1.87.11.57-.09 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/>
+          </svg>
+          Falar no WhatsApp
+        </a>
+      </div>
+    </div>
+    <button id="wa-btn" class="wa-btn" onclick="toggleWaPopup()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 1.84 6.36L.23 24l5.83-1.53A11.9 11.9 0 0 0 11.944 24c6.627 0 12-5.373 12-12s-5.373-12-12-12zm.056 21.98c-1.89 0-3.74-.51-5.36-1.47l-.38-.23-3.98 1.05 1.06-3.88-.25-.4A9.97 9.97 0 0 1 2 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10zm5.46-7.46c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.34.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.88-.8-1.47-1.79-1.64-2.09-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.38-.02-.53-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.09 4.5.71.31 1.27.5 1.7.64.71.22 1.36.19 1.87.11.57-.09 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/>
+      </svg>
+      <div id="wa-dot" class="wa-dot">
+        <div class="wa-dot-ping"></div>
+        <div class="wa-dot-inner"></div>
+      </div>
+    </button>
+  </div>
+
+  <script>
+    let waIsOpen = false;
+    function toggleWaPopup(e) {
+      if(e) e.stopPropagation();
+      waIsOpen = !waIsOpen;
+      document.getElementById('wa-popup').classList.toggle('open', waIsOpen);
+      document.getElementById('wa-btn').classList.toggle('open', waIsOpen);
+      if(waIsOpen) document.getElementById('wa-dot').style.display = 'none';
+    }
+    setTimeout(() => {
+      if(!waIsOpen) {
+        waIsOpen = true;
+        document.getElementById('wa-popup').classList.add('open');
+        document.getElementById('wa-btn').classList.add('open');
+        document.getElementById('wa-dot').style.display = 'none';
+      }
+    }, 5000);
+  </script>
 </body>
 </html>

@@ -56,6 +56,8 @@ export const metadata: Metadata = {
   }
 };
 
+import WhatsAppButton from "@/components/public/WhatsAppButton";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -64,6 +66,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className={`${barlow.variable} ${archivo.variable}`}>
       <body className="font-sans antialiased text-[#4b5563] bg-white">
+        <WhatsAppButton />
         {children}
         <script
           type="application/ld+json"
