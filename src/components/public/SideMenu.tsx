@@ -187,7 +187,7 @@ export function SideMenu() {
                 <div>
                   <span className="text-xs font-semibold text-gray-400 uppercase tracking-wider block">Endereço</span>
                   <span className="text-sm font-medium text-[#0b1e3e]">
-                    Av. Brasil 638, Centro — Canaã dos Carajás, PA
+                    Av Ipe Quadra18 Lote 01 — Canaã dos Carajás, PA
                   </span>
                 </div>
               </li>

@@ -18,10 +18,10 @@ interface SlideContent {
 
 const slides: SlideContent[] = [
   {
-    badge: 'Serviços de construção confiáveis',
-    title: 'Construindo Um Futuro Civil',
-    description: 'Conduzimos cada obra com os mais altos padrões de honestidade e transparência. Confie na Bel Lar para construir.',
-    ctaText: 'Ver todos os projetos',
+    badge: 'EXPERIÊNCIA • ENGENHARIA • CONFIANÇA',
+    title: 'Construindo Hoje.\nDeixando Legados.',
+    description: 'Há mais de 20 anos, transformamos projetos em obras sólidas, conduzidas com experiência, responsabilidade e excelência.',
+    ctaText: 'CONHEÇA NOSSOS PROJETOS',
     ctaLink: '#projetos',
     artImage: '/midia/hero/image-4.webp',
     artAlt: 'Engenheiro Bel Lar com Projetos',
@@ -144,7 +144,7 @@ export function HeroSlider() {
                   </div>
 
                   {/* Título Principal */}
-                  <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-[62px] xl:text-[72px] font-extrabold leading-[1.08] sm:leading-[1.04] tracking-tight mb-3.5 sm:mb-5 font-['Archivo',sans-serif] drop-shadow-md">
+                  <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-[62px] xl:text-[72px] font-extrabold leading-[1.08] sm:leading-[1.04] tracking-tight mb-3.5 sm:mb-5 font-['Archivo',sans-serif] drop-shadow-md whitespace-pre-line">
                     {slide.title}
                   </h1>
 

@@ -148,7 +148,7 @@ export function Header() {
               </div>
               <div className="text-left hidden md:block">
                 <span className="text-[#8a93a6] text-[10px] font-bold tracking-wider uppercase block leading-tight">
-                  Ligue para nós
+                  FALE COM NOSSA EQUIPE
                 </span>
                 <a href="tel:94991441811" className="text-[#0b1e3e] text-sm md:text-base font-extrabold leading-tight block font-['Archivo',sans-serif] hover:text-[#f2521c] transition-colors">
                   (94) 99144-1811

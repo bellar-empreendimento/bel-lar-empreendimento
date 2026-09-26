@@ -17,10 +17,37 @@ const archivo = Archivo({
 export const metadata: Metadata = {
   metadataBase: new URL('https://bellarempreendimentos.com.br'),
   title: {
-    template: '%s | Bel Lar Empreendimento',
-    default: 'Bel Lar Empreendimento — Construtora, Engenharia, Canaã dos Carajás, PA',
+    template: '%s | Bel Lar Empreendimentos',
+    default: 'Bel Lar Empreendimentos | Engenharia e Construção Civil',
   },
-  description: "Projetos de construção, arquitetura e engenharia civil com qualidade e solidez no Pará desde 1992.",
+  description: "Há mais de 20 anos transformando projetos em obras sólidas. Especialistas em construção e engenharia nos segmentos residencial, comercial e industrial.",
+  icons: {
+    icon: '/midia/sobre/favicon.webp',
+    shortcut: '/midia/sobre/favicon.webp',
+    apple: '/midia/sobre/favicon.webp',
+  },
+  openGraph: {
+    title: 'Bel Lar Empreendimentos | Engenharia e Construção Civil',
+    description: 'Há mais de 20 anos transformando projetos em obras sólidas. Especialistas em construção e engenharia.',
+    url: 'https://bellarempreendimentos.com.br',
+    siteName: 'Bel Lar Empreendimentos',
+    images: [
+      {
+        url: '/midia/sobre/BellarWEB.webp',
+        width: 1200,
+        height: 630,
+        alt: 'Bel Lar Empreendimentos',
+      },
+    ],
+    locale: 'pt_BR',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Bel Lar Empreendimentos | Engenharia e Construção',
+    description: 'Há mais de 20 anos construindo com solidez, experiência e excelência.',
+    images: ['/midia/sobre/BellarWEB.webp'],
+  },
   alternates: {
     canonical: '/',
   }
@@ -54,7 +81,7 @@ export default function RootLayout({
               },
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "Av. Brasil 638, Centro",
+                "streetAddress": "Av Ipe Quadra18 Lote 01",
                 "addressLocality": "Canaã dos Carajás",
                 "addressRegion": "PA",
                 "addressCountry": "BR"

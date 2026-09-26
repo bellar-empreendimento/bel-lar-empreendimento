@@ -32,20 +32,20 @@ export function AboutSection() {
           <div className="flex items-center gap-3 mb-3.5">
             <span className="w-8 h-[2px] bg-[#f2521c]" />
             <span className="text-[#f2521c] text-xs sm:text-[13px] font-bold tracking-[0.16em] sm:tracking-[0.2em] uppercase">
-              Bem-vindo à Bel Lar Empreendimento
+              MAIS DE 20 ANOS CONSTRUINDO COM CONFIANÇA
             </span>
           </div>
 
           <h2 className="text-[#0b1e3e] text-2xl sm:text-4xl lg:text-5xl font-extrabold leading-[1.15] sm:leading-[1.1] tracking-tight font-['Archivo',sans-serif] mb-4 sm:mb-5 max-w-xl">
-            Somos A Melhor Empresa Em Construção
+            Experiência Que Constrói<br />Resultados Sólidos
           </h2>
 
           <p className="text-[#0b1e3e] text-base sm:text-[19px] font-bold mb-3 sm:mb-4 leading-snug">
-            Obras entregues com prazo cumprido, técnica apurada e acabamento impecável.
+            Engenharia, planejamento e execução com excelência em cada etapa.
           </p>
 
           <p className="text-[#4b5563] text-sm sm:text-[16.5px] leading-relaxed mb-6 sm:mb-8 max-w-[660px]">
-            Atuamos em todas as etapas do empreendimento: estudo de viabilidade, projeto executivo, gestão de canteiro e entrega final. Cada obra é acompanhada por engenheiros responsáveis e relatórios semanais de medição, para que o cliente saiba exatamente onde cada real foi aplicado.
+            Há mais de duas décadas, a Bel Lar transforma projetos em empreendimentos sólidos. Atuamos com planejamento, gestão técnica e acompanhamento de cada etapa da obra, unindo experiência, responsabilidade e compromisso com cada entrega.
           </p>
 
           {/* Grid de 4 Benefícios */}
@@ -54,28 +54,28 @@ export function AboutSection() {
               <span className="w-6 h-6 rounded-full border border-[#f2521c] text-[#f2521c] flex items-center justify-center flex-shrink-0">
                 <Check className="w-3.5 h-3.5 stroke-[3]" />
               </span>
-              <span className="text-[#0b1e3e] text-base sm:text-[17px] font-semibold">100% de Satisfação</span>
+              <span className="text-[#0b1e3e] text-base sm:text-[17px] font-semibold">+20 Anos de Experiência</span>
             </div>
 
             <div className="flex items-center gap-3">
               <span className="w-6 h-6 rounded-full border border-[#f2521c] text-[#f2521c] flex items-center justify-center flex-shrink-0">
                 <Check className="w-3.5 h-3.5 stroke-[3]" />
               </span>
-              <span className="text-[#0b1e3e] text-base sm:text-[17px] font-semibold">Flexível e Econômico</span>
+              <span className="text-[#0b1e3e] text-base sm:text-[17px] font-semibold">Gestão Eficiente</span>
             </div>
 
             <div className="flex items-center gap-3">
               <span className="w-6 h-6 rounded-full border border-[#f2521c] text-[#f2521c] flex items-center justify-center flex-shrink-0">
                 <Check className="w-3.5 h-3.5 stroke-[3]" />
               </span>
-              <span className="text-[#0b1e3e] text-base sm:text-[17px] font-semibold">Programas Anuais</span>
+              <span className="text-[#0b1e3e] text-base sm:text-[17px] font-semibold">Excelência na Execução</span>
             </div>
 
             <div className="flex items-center gap-3">
               <span className="w-6 h-6 rounded-full border border-[#f2521c] text-[#f2521c] flex items-center justify-center flex-shrink-0">
                 <Check className="w-3.5 h-3.5 stroke-[3]" />
               </span>
-              <span className="text-[#0b1e3e] text-base sm:text-[17px] font-semibold">Equipe Treinada</span>
+              <span className="text-[#0b1e3e] text-base sm:text-[17px] font-semibold">Equipe Qualificada</span>
             </div>
           </div>
 
@@ -93,7 +93,7 @@ export function AboutSection() {
               </div>
               <div>
                 <span className="text-[#f2521c] text-[10px] sm:text-[11px] font-bold tracking-wider uppercase block">
-                  Ligue para nós
+                  FALE COM NOSSA EQUIPE
                 </span>
                 <a href="tel:94991441811" className="text-[#0b1e3e] text-base sm:text-[17px] font-extrabold font-['Archivo',sans-serif] block mt-0.5 hover:text-[#f2521c] transition-colors">
                   (94) 99144-1811

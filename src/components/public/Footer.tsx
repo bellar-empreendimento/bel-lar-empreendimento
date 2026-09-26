@@ -18,7 +18,7 @@ export function Footer() {
               Endereço
             </div>
             <div className="text-white/85 text-sm leading-relaxed">
-              Av. Brasil 638, Centro<br />Canaã dos Carajás, PA
+              Av Ipe Quadra18 Lote 01<br />Canaã dos Carajás, PA
             </div>
           </div>
         </div>
@@ -68,7 +68,7 @@ export function Footer() {
             </Link>
           </div>
           <p className="text-sm leading-relaxed text-white/70 max-w-xs">
-            Construtora com sede em Canaã dos Carajás, atuando em obras comerciais, residenciais e industriais em todo o Pará desde 1992.
+            Há mais de 20 anos, a Bel Lar transforma projetos em obras sólidas, atuando nos segmentos residencial, comercial e industrial com excelência e compromisso.
           </p>
         </div>
 
