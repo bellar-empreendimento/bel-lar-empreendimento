@@ -76,11 +76,10 @@ export function Footer() {
         <div>
           <h5 className="text-white text-base font-bold mb-5">Links Úteis</h5>
           <ul className="space-y-3 text-sm">
-            <li><Link href="#sobre" className="hover:text-[#f2521c] transition-colors">Sobre Nós</Link></li>
-            <li><Link href="#sobre" className="hover:text-[#f2521c] transition-colors">Nossa Equipe</Link></li>
-            <li><Link href="#sobre" className="hover:text-[#f2521c] transition-colors">Depoimentos</Link></li>
-            <li><Link href="#blog" className="hover:text-[#f2521c] transition-colors">Blog &amp; Artigos</Link></li>
+            <li><Link href="/termos-de-uso" className="hover:text-[#f2521c] transition-colors">Termos de Uso</Link></li>
+            <li><Link href="/politica-de-privacidade" className="hover:text-[#f2521c] transition-colors">Política de Privacidade</Link></li>
             <li><Link href="#contato" className="hover:text-[#f2521c] transition-colors">Fale Conosco</Link></li>
+            <li><Link href="#sobre" className="hover:text-[#f2521c] transition-colors">Nossa Equipe</Link></li>
           </ul>
         </div>
 

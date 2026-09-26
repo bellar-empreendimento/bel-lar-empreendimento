@@ -2,6 +2,7 @@ import type { ReactNode } from 'react'
 import { SideMenu } from '@/components/public/SideMenu'
 import { Header } from '@/components/public/Header'
 import { Footer } from '@/components/public/Footer'
+import { CookieConsent } from '@/components/public/CookieConsent'
 
 interface PublicLayoutProps {
   children: ReactNode
@@ -27,6 +28,9 @@ export default function PublicLayout({ children }: PublicLayoutProps) {
 
         {/* Rodapé Global */}
         <Footer />
+        
+        {/* LGPD Cookie Banner */}
+        <CookieConsent />
       </div>
     </div>
   )
